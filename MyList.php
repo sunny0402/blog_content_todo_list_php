@@ -24,4 +24,16 @@ class MyList
     {
         return $this->todo_list;
     }
+
+    public function getTodo(int $todo_idx): Todo
+    {
+        return $this->todo_list[$todo_idx];
+    }
+
+    public function swapListItems(int $idx_item1, int $idx_item2): void
+    {
+        $temp = $this->getTodo($idx_item1);
+        $this->todo_list[$idx_item1] = $this->getTodo($idx_item2);
+        $this->todo_list[$idx_item2] = $temp;
+    }
 }

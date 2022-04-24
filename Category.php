@@ -8,9 +8,13 @@ class Category
     {
         $this->category_name = $category;
     }
-
-    public function getCategory(): string
+    public function getCategoryName(): string
     {
         return $this->category_name;
+    }
+
+    public function setCategoryName(string $new_name): void
+    {
+        $this->category_name = $new_name;
     }
 }
